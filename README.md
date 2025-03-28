@@ -15,7 +15,7 @@ The goal of this project is to gain a solid understanding of how the modern data
 
 - **Databricks**: I used Databricks for data transformation. After ingesting the raw e-commerce data into Databricks via Fivetran, I leveraged Delta Lake to clean, transform, and model the data. SQL was used to perform cohort analysis by calculating first and second purchase dates and time differences between them. Additionally, I used Databricks Dashboards to visualize key insights like retention rates and repeat purchases.
 
-## Data Source
+## 📂 Data Source
 - **E-commerce Sales Data**: The dataset simulates a table `ecom_orders` containing transactional information, such as customer IDs, order dates, order IDs, and sales amounts. [Download the Sample Data](CSV_Files/ecom_orders.csv) (CSV file for loading into BigQuery)
 
 ## 📊 Results  

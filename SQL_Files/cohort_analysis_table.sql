@@ -1,6 +1,11 @@
+/*
+Created a table with customers' first and second purchases and calculated the time difference between them.
+This table will be used for further calculations.
+*/
+
 CREATE OR REPLACE TABLE cohort_analysis AS
 
-WITH first_purchase AS (
+WITH first_purchase AS (                  -- First CTE to get the first purchase date for each customer
 SELECT
   customer_id
   ,MIN(order_date) AS first_purchase
@@ -9,20 +14,20 @@ FROM
 GROUP BY 1
 ),
 
-second_purchase AS (
+second_purchase AS (                      -- Second CTE to get the second purchase date for each customer using ROW_NUMBER for ranking
 SELECT
   customer_id
   ,order_date AS second_purchase
-FROM (SELECT
+FROM (SELECT                              -- Subquery with ROW_NUMBER for ranking
         customer_id
         ,order_date
         ,ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) AS purchase_num
       FROM
         ecom_orders_csv)
-WHERE purchase_num = 2
+WHERE purchase_num = 2                    -- Filter to get only the second purchase
 )
 
-SELECT 
+SELECT                                    -- Final selection, calculating the difference in days between first and second purchase
   fp.customer_id
   ,fp.first_purchase
   ,sp.second_purchase

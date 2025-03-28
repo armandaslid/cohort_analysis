@@ -32,6 +32,10 @@ SELECT                                    -- Final selection, calculating the di
   ,fp.first_purchase
   ,sp.second_purchase
   ,DATE_DIFF(sp.second_purchase, fp.first_purchase) AS days_between_1_and_2
-FROM first_purchase AS fp
-LEFT JOIN second_purchase AS sp
-ON fp.customer_id = sp.customer_id
+FROM
+  first_purchase AS fp
+LEFT JOIN
+  second_purchase AS sp
+ON
+  fp.customer_id = sp.customer_id
+;

@@ -22,8 +22,10 @@ The goal of this project is to gain a solid understanding of how the modern data
 ⚠️ Initially, I created the `cohort_analysis` table in Databricks, which included columns for `customer_id`, `first_purchase`, `second_purchase`, and the `days_between_1_and_2`. [This table](https://github.com/armandaslid/cohort_analysis/blob/main/CSV_Files/cohort_analysis.csv) was used for further calculations and visualization in the dashboard.  
   
 After completing the analysis, the following insights were revealed:
-1. **Retention Rate by Cohort**: Analysis showed which cohort had the highest retention rates at 1, 2, and 3 months.
-2. **Repeat Purchase Rate**: Trends in repeat purchases were visualized, highlighting second, third, and fourth purchases across cohorts.
-3. **Cohort Size Analysis**: Cohort sizes were plotted to track the number of new customers per cohort over time.
+1. **Retention Rate by Cohort**: Analysis showed which cohort had the highest retention rates at 1, 2, and 3 months.  
+   [SQL Code](path/to/your-image.png)
+   ![Retention Rate by Cohort](PNG_Files/Retention_Rate_by_Cohort.png)
+3. **Repeat Purchase Rate**: Trends in repeat purchases were visualized, highlighting second, third, and fourth purchases across cohorts.
+4. **Cohort Size Analysis**: Cohort sizes were plotted to track the number of new customers per cohort over time.
 
 These visualizations provide valuable insights into customer behavior, which can help businesses optimize their marketing strategies and improve customer retention.

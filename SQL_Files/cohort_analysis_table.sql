@@ -5,7 +5,7 @@ SELECT
   customer_id
   ,MIN(order_date) AS first_purchase
 FROM
-  ecom_orders_csv
+  bigquery_db_cohort_db.ecom_orders
 GROUP BY 1
 ),
 
